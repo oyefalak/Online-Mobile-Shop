@@ -1,0 +1,384 @@
+<html>
+
+<style>
+#div1{
+      background:green;
+	  width:100%;
+	  height:200px;
+	  PADDING:10PX;
+}
+img{ width:25%;
+     height:200px;
+     border: 2px solid black;
+	 
+}
+marquee{
+width:100%;
+font-size:60px;}
+
+#hello{
+
+
+background:url(12.png);
+background-repeat:repeat;
+width:100%;
+height:200px;
+position:absolute;
+top:40px;
+left:10px;
+animation: animateone 5s infinite linear;
+
+
+}
+
+
+@keyframes animateone
+{
+0%{
+
+background-position: 0px 0px;
+}
+100%{
+
+background-position: 100px 200px;
+}
+}
+
+
+
+</style>
+<head>
+<script>
+<script type="text/javascript">
+{
+	function validate()
+    var uname = document.forms["registration"]["uname"].value;
+
+	
+	
+    if (uname.value == "") 
+	{
+        alert("Please Enter the first name");
+		return false;
+		
+    }
+ 
+    else if (document.registration.fname.value == 0) 
+	{
+        alert("Please Enter the Middle name");
+    }
+    else if (document.registration.poa.value == 0) 
+	{
+        alert("Please Enter the Last name");
+    }
+	else if (document.registration.paa.value == 0) 
+	{
+        alert("choose any one male/female");
+    }
+	else if (document.registration.gender.value == 0) 
+	{
+        alert("Please Enter the Birthdate");
+    }
+	else if (document.registration.city.value == 0) 
+	{
+        alert("choose any one Blood-group");
+    }
+	else if (document.registration.state.value == 0) 
+	{
+        alert("Please Enter the Symptoms");
+    }
+	else if (document.registration.courses.value == 0) 
+	{
+        alert("Please choose Diagnosis Report");
+    }
+	var x = document.registration.mnumber.value;
+	       if (x.length!=10)
+           {
+                alert("Please Enter Your Valid Mobile Number");
+                return false;
+           }
+           if(isNaN(x)||x.indexOf(" ")!=-1)
+           {
+              alert("Enter Numeric value")
+              return false; 
+           }
+           
+	else if (document.registration.pincode.value == 0) 
+	{
+        alert("Please Enter Your Email ID");
+    }
+	else if (document.registration.emailid.value == 0) 
+	{
+        alert("Please Enter Your New User ID");
+    }
+	else if (document.registration.pass.value == 0) 
+	{
+        alert("Please Enter Your New Password");
+    }
+    else {
+ 
+        {location="student Register Form.html" }
+         }
+}	
+</script>           
+
+
+
+</head>
+<body>
+<tr>
+<td>
+   
+<a href="feedback.html"><input type="Button" name="btnl" value="FeedBack" style="margin-left:450px; float:left;"></a>&nbsp;&nbsp;
+<a href="email.html"><input type="Button" name="btnl" value=" Email-Login"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<b><u>Toll Free:1800 200 1810 | Mail:info@mss.shop.in</u>
+</td>
+</tr>
+
+ <div id="div1">
+
+	<div id="hello"> </div>
+	
+	
+	<img src="sghjklpo.jpg" style="float:left" alt="sghjklpo"/>
+	<img src="sdfghjfghj.jpg" alt="sdfghjfghj" style="width:70%; height:200px; padding: 0 20px; float':left"/>
+ 
+   </div>
+  
+  <marquee style="border:1px dashed orange;background:orange;">WELCOME TO MOBILE SHOP</marquee>
+  <div>
+
+<table cellpadding="2" width="20%"  bgcolor="green" align="center" cellspacing="2">
+<form name="registration" action="Home.html" method="post" onsubmit="validate(this.form);">
+<tr>
+<td colspan="2">
+<marquee behavior="alternate" scrollamount="1" style="border:1px solid white"><center><font size="6">Online Booking form</center></font></marquee>
+</td>
+</tr> 
+<tr>
+<td> Name </td>
+<td><input type="text" name="uname" placeholder="Enter Name" required  size="30"></td>
+</tr>
+
+<tr>
+<td> Father Name </td>
+<td><input type="text" name="fname" placeholder="Enter Father name" required id="fathername" size="30"></td>
+</tr>
+
+
+<tr>
+<td> Postal Address </td>
+<td><textarea placeholder="Enter Postal Address" name="poa" required rows="4" cols="32">
+</textarea></td>
+</tr>
+
+
+<tr>
+<td> Personal Address </td>
+<td><textarea placeholder="Enter Personal Address" required name="paa" rows="4" cols="32">
+</textarea></td>
+</tr>
+
+<tr>
+<td> Gender</td>
+<td><input type="radio" name="Gender" value="male">Male
+<input type="radio" name="Gender" value="Female">Female</td>
+
+
+</tr>
+
+<tr>
+<td>City</td>
+<td><select name="city">
+<option selected>select</option>
+<option value="Goa">Goa</option>
+<option value="Ahmedabad">Ahmedabad</option>
+<option value="surat">surat</option>
+<option value="jaipur">jaipur</option>
+</select></td>
+</tr>
+
+<tr>
+<td>State</td>
+<td><select name="city">
+<option selected>Gujarat</option>
+<option value="Goa">Rajsthan</option>
+<option value="Ahmedabad">Maharastra</option>
+<option value="surat">Uttar pardesh</option>
+<option value="jaipur">Madhya pardesh</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Choice</td>
+<td><select name="courses">
+<option selected >select</option>
+<option value="mca">kye pait</option>
+<option value="mba">teauch screen</option>
+
+</select></td>
+
+<tr>
+
+<tr>
+<td>Mobile No</td>
+<td><select name="mnumber">
+<option value="+85">+85</option>
+<option value="+86">+86</option>
+<option value="+87">+87</option>
+<option value="+88">+88</option>
+<option value="+90">+89</option>
+<option value="+90">+90</option>
+<option selected>+91</option>
+<option value="+92">+92</option>
+<option value="+93">+93</option>
+<option value="+94">+94</option>
+<option value="+95">+95</option>
+<option value="+96">+96</option>
+<option value="+97">+97</option>
+<option value="+98">+98</option>
+<option value="+99">+99</option>
+<input type="tel" name="mnumber" placeholder="Mobile No" size="7" required  maxlength="10">
+</select></td>
+
+<tr>
+
+<td>D.O.B</td>
+ <td><select name="DOB">
+<option value="day">day</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+</select>
+
+<select name="DOB">
+<option value="month">month</option>
+<option value="jan">jan</option>
+<option value="feb">feb</option>
+<option value="march">march</option>
+<option value="feb">Apr</option>
+<option value="march">May</option>
+<option value="jun">jun</option>
+<option value="july">july</option>
+<option value="aug">aug</option>
+<option value="sep">sep</option>
+<option value="oct">oct</option>
+option value="nov">nov</option>
+<option value="dec">dec</option>
+</select>
+
+<select name="DOB">
+<option value="year">year</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+
+</select>
+</td></tr>
+</tr> 
+
+<tr>
+<td> Pin code</td>
+<td><input type="text" name="Pincode" id="Pin code" placeholder=" Enter Pin code" required minlength="5" maxlength="8" size="30"></td>
+</tr>
+
+<tr>
+<td> Email id </td>
+<td><input type="email" name="Emailid" id="Email id" placeholder="Entetr Email id" required size="30"></td>
+</tr>
+
+<tr>
+<td> Password </td>
+<td><input type="Password" name="Pass" placeholder="Enter password" required minlength="6" maxlength="10" size="30"></td>
+</tr>
+
+<tr>
+<td colspan="2"><input type="Submit" name="submit" id="submit">
+<input type="Reset" name="Reset" id="Reset">
+      <a href="login.html"> Log In Click Here</a>
+</td>
+
+</tr>
+</table>
+</form>
+<div style="width:100%; height:150px; background:orange;">
+<b  style="font-size:30px;">MOBILE Inquiry</b></br>
+<hr>
+<p>
+mobile shop,ADINATHNAGAR ,ODHAV,
+ Ahmedabad 380006</br>
+Phone :7405980975</br>
+Email :MS@ms.SHOP.in</br>
+<tr>
+<td>
+   
+<a href="feedback.html"><input type="Button" name="btnl" value="FeedBack" style="margin-left:65%; float:left;"></a>&nbsp;&nbsp;
+<a href="email.html"><input type="Button" name="btnl" value=" Email-Login"></a>&nbsp;&nbsp;
+<a href="login.html"><input type="Button" name="btnl" value="Login" style=" margin-left:2%; float:left;"></a>&nbsp;&nbsp;
+<a href="Student Registraion Form.html"><input type="Button" name="btnl" value="Sign Up"></a>&nbsp;&nbsp;
+</td>
+</tr>
+</p>
+</div>
+
+
+
+<div style="width:100%; height:20px; background:black;color:white; text-align:center;">
+<b align="center"> Copyright © MS(M.s. Shop) All Right reserved </b>
+<hr>
+</div>
+
+</body>
+</html>

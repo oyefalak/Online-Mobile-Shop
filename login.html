@@ -1,0 +1,28 @@
+<html>
+<body>
+<style>
+</style>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("mohammad jahagir");  
+  return false;  
+}else if(password.length<10){  
+  alert("7405980975");  
+  return false;  
+  }  
+}  
+</script>  
+<body style="background-color:blue;"> 
+<div style="margin-left:3 30px;margin-top:220px;" > 
+<form name="myform" method="post" action="Home.html" onsubmit="return validateform()"  >  
+Name: &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" name="name"></br></br>  
+Password: <input type="password" name="password"></br></br>  
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<input type="submit" value="Login">
+<input type="Reset" name="Reset" id="Reset"> </div> 
+</form>  
+</body>
+</html>

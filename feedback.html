@@ -1,0 +1,175 @@
+<html>
+<head>
+<style>
+div.container 
+{
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer 
+{
+    padding: 1em;
+    color: blue;
+    clear: left;
+    text-align: center;
+    
+ }
+
+
+ul
+ {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #332;
+ }
+
+li
+ {
+    float: left;
+ }
+
+login{
+            float:right;
+  }
+
+li a, .dropbtn 
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 17px ;
+    text-decoration: none;
+ }
+
+li a:hover
+ {
+    background-color: blue;
+ }
+
+#email_validation, #name_validation {
+    display:none;
+}
+
+span.error {
+  color:red;
+}
+.row {
+  margin:5px;
+}
+</style>
+<body>
+<div class="container">
+
+             <header>
+                           <h1>MOBILE SHOP</h1>
+
+             </header>
+
+
+<ul>
+ <li>
+		<a href="home.html">Home</a></li>
+	   	<li><a href="about.html">About us</a></li>
+                     	<li><a href="feedback.html">feedback</a></li>
+                   	<li><a href="contact us.html">contact us</a></li>
+                    	<li><a href="gallery.html">gallery</a></li>
+ </div>
+  </li>
+</ul>
+ 
+<br>
+<h1><center>send us your feedback</h1> </center>
+<br>            
+<center>
+<form id="contact_form" action="msg.html" method="POST" onsubmit="return validateForm();" >
+  <div class="row">
+    <label class="required" for="name">Your name:</label><br />
+   <input id="name" name="name" type="text" value="" size="30" /><br />
+    <span id="name_validation" class="error"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="email">Your email:</label><br />
+    <input id="email" name="email" type="text" value="" size="30" /><br />
+    <span id="email_validation" class="error"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="message">Your message:</label><br />
+    <textarea id="message" name="message" rows="6" cols="22"></textarea><br />
+    <span id="message_validation" class="error"></span>
+  </div>
+    
+    <input type="submit" value="Send" />
+</form>
+
+<script language="javascript">
+function validateForm() {
+  var valid = 1;
+  var email = document.getElementById('email');
+  var email_validation = document.getElementById("email_validation");
+  var name = document.getElementById('name');
+  var name_validation = document.getElementById("name_validation");
+  var message_validation = document.getElementById("message_validation");
+  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  
+  if (name.value === "") 
+{
+    valid = 0;
+    name_validation.innerHTML = "Enter your name";
+    name_validation.style.display = "block";
+    
+  } 
+else
+ {
+    name_validation.style.display = "none";
+    
+  }
+  
+  if (message.value === "")
+ {
+    valid = 0;
+    message_validation.innerHTML = "Field Required";
+    message_validation.style.display = "block";
+    
+  } 
+else
+ {
+    message_validation.style.display = "none";
+    
+  }
+  
+  if (email.value === "") 
+{
+    valid = 0;
+    email_validation.innerHTML = "enter your email";
+    email_validation.style.display = "block";
+   
+  }
+else 
+ {
+    email_validation.style.display = "none";
+   
+  }
+  
+  if(!filter.test(email.value)) {
+    valid = 0;
+    email_validation.innerHTML = "Invalid email address";
+    email_validation.style.display = "block";
+ 
+  }
+ else
+ {
+    email_validation.style.display = "none";
+   
+  }
+  if (!valid)
+    return false;
+}
+</script>
+<footer>
+<b>© MOBILE SHOP(MS). All rights reserved.</b>
+</footer>
+</body>
+</html>

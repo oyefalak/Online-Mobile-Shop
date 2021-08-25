@@ -1,0 +1,238 @@
+<html>
+<head>
+<script language="javascript">
+function validation_for_signup()
+{
+
+                var check_email = /^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z\.]{2,6}$/;
+                var check_username = /^[a-zA-Z0-9_]{3,16}$/;
+                var check_name = /^[a-zA-Z]{3,16}$/;
+                var check_phone = /^[0-9]{3,16}$/;
+
+		 if(document.signup.firstname.value=="")
+                                {
+                                                alert("please enter first name");
+                                                document.signup.firstname.focus();
+                                                return false;
+                                }
+                                else if(check_name.test(document.signup.firstname.value) == false)
+                                {
+                                                alert('Invalid  first name');
+                                                document.signup.firstname.focus();
+                                                return false;
+                                }
+                                if(document.signup.lastname.value=="")
+                                {
+                                                alert("please enter Last name");
+                                                document.signup.lastname.focus();
+                                                return false;
+                                }
+                                else if(check_name.test(document.signup.lastname.value) == false)
+                                {
+                                                alert('Invalid  Last name');
+                                                document.signup.lastname.focus();
+                                                return false;
+                                }
+
+                                if(document.signup.username.value=="")
+                                {
+                                                alert("please enter User name");
+                                                document.signup.username.focus();
+                                                return false;
+                                }
+                                else if(check_username.test(document.signup.username.value) == false)
+                                {
+                                                alert('Invalid  User name');
+                                                document.signup.username.focus();
+                                                return false;
+                                }
+                                if(document.signup.email.value=="")
+                                {
+                                                alert("please enter Email");
+                                                document.signup.email.focus();
+                                                return false;
+                                }
+                                else if(check_email.test(document.signup.email.value) == false)
+                                {
+                                                alert('Invalid  Email');
+                                                document.signup.email.focus();
+                                                return false;
+                                }
+
+		
+                                if(document.signup.phone.value=="")
+                                {
+                                                alert("please enter phone");
+                                                document.signup.phone.focus();
+                                                return false;
+                                }
+                                else if(check_phone.test(document.signup.phone.value) == false)
+                                {
+                                                alert('Invalid  phone');
+                                                document.signup.phone.focus();
+                                                return false;
+                                }
+
+                                if(document.signup.password.value=='')
+                                {
+                                                alert("Please enter Password.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                                else if(document.signup.password.value.length<6)
+                                {
+                                                alert("Password is too short.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                                if(document.signup.passconf.value=='')
+                                {
+                                                alert("Please confirm Password.");
+                                                document.signup.passconf.focus();
+                                                return false;
+                                }
+                                else if(document.signup.password.value!=document.signup.passconf.value)
+                                {
+                                                alert("Password does not match.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                               
+                               
+}
+
+
+</script>
+<style> 
+ div.container 
+{
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer 
+{
+    padding: 1em;
+    color: red;
+ 
+    clear: left;
+    text-align: center;
+    
+ }
+
+
+ul
+ {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+ }
+
+li
+ {
+    float: left;
+ }
+
+li a, .dropbtn 
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 17px ;
+    text-decoration: none;
+ }
+
+li a:hover
+ {
+    background-color: red;
+ }
+</style>
+</head>
+<body>
+
+
+<div class="container">
+
+             <header>
+                           <h1>MOBILE SHOP</h1>
+             </header>
+
+
+<ul>
+  	   <li><a href="home.html">Home</a></li>
+	   <li><a href="about.html">About us</a></li>
+                     <li><a href="contact us.html">contact us</a></li>
+                   <li><a href="gallery.html">gallery</a></li>
+                    <li><a href="feedback.html">feedback</a></li>
+	   
+    </div>
+  </li>
+</ul>
+
+<center>
+<h1>onlign Ragistration form</h1>
+</br>
+<form name="signup" action="submit.html" onSubmit="return validation_for_signup()" method="post">
+<table border="1" align="center" cellpadding="12">
+<tr>
+<td>First name:</td>
+<td>
+          <input type="text" name="firstname" value="">
+</td>
+</tr>
+
+<tr>
+<td>Last name:</td>
+<td>
+          <input type="text" name="lastname" value="">
+</td>
+</tr>
+
+<tr>
+<td>User name:</td>
+<td>
+          <input type="text" name="username" value="">
+</td>
+</tr>
+<tr>
+<td>Email id:</td>
+<td>
+          <input type="text" name="email" value="">
+</td>
+</tr>
+<tr>
+<td>Phone:</td>
+<td>
+          <input type="text" name="phone" value="">
+</td>
+</tr>
+<tr>
+<td>Password:</td>
+<td>
+          <input type="text" name="password" value="">
+</td>
+</tr>
+<tr>
+<td>Confirm password:</td>
+<td>
+          <input type="text" name="passconf" value="">
+</td>
+</tr>
+<tr align="center">
+<td>
+<input type="submit" value="Submit" />
+</td>
+<td>
+                <input type="reset">
+            </td>
+</tr>
+</table>
+</form>	
+		
+</br>
+<footer><b>© MOBILE SHOP(MS). All rights reserved</b></footer>
+</div>
+</body>
+</html>
